@@ -1,3 +1,11 @@
+# Overview
+This repository contains a basic sample that uses:
+
+    - Semantic UI for css
+    - JSPM for development
+    - React components written with typescript
+    
+
 # Welcome to ASP.NET 5 Preview
 
 We've made some big updates in this release, so it’s **important** that you spend a few minutes to learn what’s new.

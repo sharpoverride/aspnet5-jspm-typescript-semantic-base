@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WebApplication</title>
+
+        <environment names="Development">
+            <link rel="stylesheet" href="~/css/semantic.min.css" />
+        </environment>
+        <environment names="Staging,Production">
+            <link rel="stylesheet" href="~/css/semantic.min.css" asp-append-version="true" />
+        </environment>
+    </head>
+    <body>
+        <div id="app"></div>
+        @RenderBody()
+        
+        <environment names="Development,Staging,Production">
+            <script src="jspm_packages/system.js"></script>
+            <script src="config.js"></script>
+            <script>
+                System.import('app')
+			.then(function() {
+				console.log('running');
+			})
+			.catch(function(err) {
+				console.log('Error: ', err.stack);
+			});
+            </script>
+        </environment>
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

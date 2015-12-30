@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "jsx": "react",
+        "module": "system",
+        "sourceMap": true,
+        "outFile": "wwwroot/js/application.js",
+        "outDir": "wwwroot/js/out",
+        "rootDir": "wwwroot/ts"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
